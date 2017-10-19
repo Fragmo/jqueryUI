@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <style>
+           #toggle{
+               height: 100px;
+               width: 100px;
+               background: #ccc;
+           }
+        </style>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <p>Pincha en cualquier cuadro del documento</p>
+        <div id="ejemploTab">
+            <ul>
+                <li> <a href="#fragmento1"><span>Uno</span></a> </li>
+                <li> <a href="#fragmento2"><span>Dos</span></a> </li>
+                <li> <a href="#fragmento3"><span>Tres</span></a> </li>
+            </ul>
+            
+            <div id="fragmento1"> <p>idiota</p></div>
+            <div id="fragmento2"> <p>es</p></div>
+            <div id="fragmento3"> <p>Sergio</p></div>
+        </div>
+        
+        <script>
+            $("#ejemploTab").tabs({
+                active:2,
+                collapsible: true,
+                //disabled: [0,1]
+                event: "mouseover",
+                hide:{effect:"explode", duration:1000},
+                show:{effect:"blind", duration:800}
+            });
+            //var parrafo = $('<p> parrafo nuevo '+ numeroParrafo + '</p>');
+                
+        </script>
+    </body>
+
+</html>
